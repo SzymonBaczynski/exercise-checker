@@ -309,9 +309,19 @@
                             // range3[1] +
                             // ") \nSurface(h, 360°, xAxis)\n"
                         );
+
+
+
+                        app2.setPerspective('A'); // Set perspective to Algebra
+                        app2.setVisible('graphics', false); // Hide the Graphics panel
+                        app2.setVisible('algebra', true);
+
                         app2.refreshViews();
+
+
+
                      
-                    };};
+                };};
 
 
                     var params = {
@@ -335,10 +345,11 @@
                         height: 600,
                         enable3D: false,
                         showToolBar: false,
-                        showAlgebraInput: true,
+                        showAlgebraInput: false,
                         showMenuBar: false,
                         showToolBarHelp: false,
                         enableUndoRedo: false,
+                        inputBar: false
                     };
 
                     var applet = new GGBApplet(params, true);
@@ -353,9 +364,7 @@
 
                     window.addEventListener("load", function () {
                         applet2.inject("calc");
-                    });
-
-                
+                    });               
 
 
             </script>
